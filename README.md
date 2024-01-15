@@ -10,11 +10,11 @@ your application runs without problems in this environment.
 
 ## Features
 * PHP 5.5 including the following additional extensions
-  * php5-mysql
-  * php5-sqlite
-  * php5-curl
-  * php5-intl
-  * php5-xdebug
+  * php7.4-mysql
+  * php7.4-sqlite
+  * php7.4-curl
+  * php7.4-intl
+  * php7.4-xdebug
 * Apache 2.4 including
   * mod_rewrite
 * Config for DEV and PROD (*not recommended*) usage

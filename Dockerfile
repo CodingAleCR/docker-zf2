@@ -1,12 +1,14 @@
-FROM ubuntu:14.04
+FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 
-MAINTAINER Matthias Glaub <magl@magl.net>
+LABEL AUTHOR="Ale Ulate <me@codingale.dev>"
 
 # update and install packages
 RUN apt-get -qq update \
         && apt-get -qq upgrade -y \
-        && apt-get -qq install -y apache2 php5 php5-mysql php5-sqlite php5-curl php5-intl php5-xdebug
+        && apt-get -qq install software-properties-common \
+        && add-apt-repository ppa:ondrej/php \
+        && apt-get -qq install -y apache2 php7.4 php7.4-mysql php7.4-sqlite php7.4-curl php7.4-intl php7.4-xdebug
 
 # setting apache env vars
 ENV APACHE_CONFDIR /etc/apache2

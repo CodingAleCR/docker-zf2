@@ -38,26 +38,26 @@ if [ ! -e "$INIT_CHECK_FILE" ]; then
 
     for MOD in $PHP_MODS_DEFAULT_DISABLE
     do
-        say "(default) disable php5 module $MOD"
-        php5dismod $MOD
+        say "(default) disable php7.4 module $MOD"
+        php7.4dismod $MOD
     done
 
     for MOD in $PHP_MODS_DEFAULT_ENABLE
     do
-        say "(default) enable php5 module $MOD"
-        php5enmod $MOD
+        say "(default) enable php7.4 module $MOD"
+        php7.4enmod $MOD
     done
 
     for MOD in $PHP_MODS_DISABLE
     do
-        say "disable php5 module $MOD"
-        php5dismod $MOD
+        say "disable php7.4 module $MOD"
+        php7.4dismod $MOD
     done
 
     for MOD in $PHP_MODS_ENABLE
     do
-        say "enable php5 module $MOD"
-        php5enmod $MOD
+        say "enable php7.4 module $MOD"
+        php7.4enmod $MOD
     done
 
     # apache configuration
